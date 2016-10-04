@@ -17,7 +17,7 @@
             <!--Tablero de juego-->
             <center>
             <table>
-              <tr ng-repeat="i in [1,2,3,4]">
+              <tr ng-repeat="i in [0,1,2,3]">
                 <td ng-repeat="img in imgs[i]"><img src={{img.img}} alt="celda" class="celda" /></td>
               </tr>
             </table>

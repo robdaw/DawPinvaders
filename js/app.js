@@ -2,6 +2,20 @@ var app = angular.module("pInvApp", []);
 
 app.controller("pInvAppCtrl", function($scope,$http) {
     $scope.imgs = new Array(4);
+    $scope.imgs[0]=[
+      {
+        img:"img/celdaPocketInvaders100.png"
+      },
+      {
+        img:"img/celdaPocketInvaders100.png"
+      },
+      {
+        img:"img/celdaPocketInvaders100.png"
+      },
+      {
+        img:"img/celdaPocketInvaders100.png"
+      }
+    ];
     $scope.imgs[1]=[
       {
         img:"img/celdaPocketInvaders100.png"
@@ -41,24 +55,10 @@ app.controller("pInvAppCtrl", function($scope,$http) {
         img:"img/celdaPocketInvaders100.png"
       },
       {
-        img:"img/celdaPocketInvaders100.png"
-      }
-    ];
-    $scope.imgs[4]=[
-      {
-        img:"img/celdaPocketInvaders100.png"
-      },
-      {
-        img:"img/celdaPocketInvaders100.png"
-      },
-      {
-        img:"img/celdaPocketInvaders100.png"
-      },
-      {
         img:"img/celdaNavePocketInvaders100.png"
       }
     ];
-    $scope.naveActualFila=4;
+    $scope.naveActualFila=3;
     $scope.naveActualColumna=3;
     $scope.posicion;
     $scope.mueveNave = function() {
@@ -72,9 +72,9 @@ app.controller("pInvAppCtrl", function($scope,$http) {
           });
     };
     $scope.resetea = function() {
-      $scope.imgs[4][3].img="img/celdaNavePocketInvaders100.png";
+      $scope.imgs[3][3].img="img/celdaNavePocketInvaders100.png";
       $scope.imgs[$scope.naveActualFila][$scope.naveActualColumna].img="img/celdaPocketInvaders100.png";
-      $scope.naveActualFila=4;
+      $scope.naveActualFila=3;
       $scope.naveActualColumna=3;
     }
 
